@@ -1,3 +1,5 @@
+'use strict';
+
 window.renderStatistics = function (ctx, names, times) {
   var WIDTH = 420;
   var HEIGHT = 270;
@@ -26,8 +28,8 @@ window.renderStatistics = function (ctx, names, times) {
       MAX_TIME = times[i];
     }
   }
-  for (var i = 0; i <= names.length - 1; i++) {
-    if (names[i] == 'Вы') {
+  for (i = 0; i <= names.length - 1; i++) {
+    if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
       ctx.fillStyle = 'hsla(246, 100%, ' + Math.random() * 100 + '%, 1)';
